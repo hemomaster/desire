@@ -36,13 +36,6 @@ ul[class] {
   list-style-type: none;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-}
-
 input,
 button,
 textarea,
@@ -56,6 +49,16 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+img,
+a {
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 a {

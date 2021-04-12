@@ -6,7 +6,33 @@
 /* *******************************
 HEADER
 ******************************* */
+.header {
+  padding: 44.5px 0;
 
+  &__nav {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    &.logo {
+      width: 97px;
+      height: 31px;
+    }
+  }
+
+  &__btn {
+    padding-left: 15px;
+    fill: clr(black-color);
+    &-icon {
+      display: block;
+      width: 37px;
+      height: 29px;
+    }
+  }
+}
 /* *******************************
 NAVIGATION
 ******************************* */

@@ -26,8 +26,8 @@ body {
 
 .icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 1.5em;
+  height: 1.5em;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -62,15 +62,77 @@ CONTAINER
 /* *******************************
 TITLE
 ******************************* */
-
+.title {
+  @include montserrat();
+  color: clr(title-color);
+}
+/* *******************************
+NAVIGATION
+******************************* */
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__list:last-of-type {
+    margin-right: 45px;
+  }
+  &__list-item {
+  }
+  &__list-item:not(:last-child) {
+    margin-right: 80px;
+  }
+  &__list-link {
+    display: block;
+    font-size: fz(sm);
+    line-height: 1.375;
+  }
+}
 /* *******************************
 LOGO
 ******************************* */
-
+.logo {
+  width: 194px;
+  height: 58px;
+  padding: 0 15px;
+  box-sizing: content-box;
+  &__img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
 /* *******************************
-LINK-HOVER
+HOVER-LINK
 ******************************* */
+.hover-link {
+  span {
+    position: relative;
+    display: block;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(clr(title-color), 0.7);
+      border-radius: 1px;
+      transform: scale(0);
+      @include transit(transform);
+    }
+  }
 
+  &.active {
+    span::before {
+      transform: scale(1);
+    }
+  }
+
+  &:hover span::before {
+    transform: scale(1);
+  }
+}
 /* *******************************
 SUBSCRIBE
 ******************************* */

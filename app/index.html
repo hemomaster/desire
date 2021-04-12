@@ -34,7 +34,49 @@
 
   <body>
     <div class="wrapper">
-      <header class="header">Header</header>
+      <header class="header">
+        <div class="container">
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a href="#" class="nav__list-link title hover-link"
+                  ><span>About</span></a
+                >
+              </li>
+              <li class="nav__list-item">
+                <a href="#" class="nav__list-link title hover-link"
+                  ><span>Gallery</span></a
+                >
+              </li>
+            </ul>
+            <a href="#" class="header__logo logo"
+              ><img
+                width="194"
+                height="58"
+                src="./images/logo.png"
+                alt="logo company"
+                class="logo__img"
+            /></a>
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a href="#" class="nav__list-link title hover-link"
+                  ><span>Blog</span></a
+                >
+              </li>
+              <li class="nav__list-item">
+                <a href="#" class="nav__list-link title hover-link"
+                  ><span>Contact</span></a
+                >
+              </li>
+            </ul>
+            <button class="header__btn" type="button">
+              <svg class="icon header__btn-icon">
+                <use xlink:href="./images/symbol-defs.svg#icon_burger"></use>
+              </svg>
+            </button>
+          </nav>
+        </div>
+      </header>
       <main class="main">
         <h1 class="visually-hidden">desire: furniture for life</h1>
         <p>Content</p>
