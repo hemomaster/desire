@@ -1,0 +1,204 @@
+/* *******************************
+OTHER
+******************************* */
+$base: 4px;
+$point-size: 10px;
+
+/* *******************************
+COLORS
+******************************* */
+$colors: (
+  black-color: #000,
+  white-color: #fff,
+  yellow-color: #f1d152,
+  text-color: #5a5a5a,
+  text-small: #707070,
+  title-color: #363838,
+  footer-bg-color: #dfdfdf,
+  copyrait-color: #a1a1a1,
+  social-color: #707070,
+  controls-text: #8f8d8d,
+  controls-border: #454647,
+  controls-hover-bg: #ffef35,
+);
+/* *******************************
+FONTS
+******************************* */
+$fontsize: (
+  xs: 14px,
+  sm: 16px,
+  md: 20px,
+  lg: 24px,
+  xl: 36px,
+  xxl: 60px,
+  xxxl: 110px,
+);
+
+$fontweidth: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+  extra-bold: 800,
+  black: 900,
+);
+/* *******************************
+BREAKPOINTS
+******************************* */
+$breakpoints: (
+  xxs: 0,
+  xs: 375px,
+  sm: 414px,
+  md: 576px,
+  lg: 768px,
+  xl: 992px,
+  xxl: 1024px,
+  xxxl: 1200px,
+  xxxxl: 1440px,
+);
+
+$breakpoints-aft: (
+  xxs: map-get($breakpoints, xxs) + 1,
+  xs: map-get($breakpoints, xs) + 1,
+  sm: map-get($breakpoints, sm) + 1,
+  md: map-get($breakpoints, md) + 1,
+  lg: map-get($breakpoints, lg) + 1,
+  xl: map-get($breakpoints, xl) + 1,
+  xxl: map-get($breakpoints, xxl) + 1,
+  xxxl: map-get($breakpoints, xxxl) + 1,
+  xxxxl: map-get($breakpoints, xxxxl) + 1,
+);
+/* *******************************
+FUNCTION AND MIXIN
+******************************* */
+// fixed fancybox error
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+// возвращает значение цвета по ключу $key
+// $colors - ассоциативный список пар $key:цвет,
+// $colors - задан в _variables.scss
+@function clr($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+// Возвращает значение font-size по ключу
+// из ассоциативного массива $fontsize
+@function fz($key) {
+  @if map-has-key($fontsize, $key) {
+    @return map-get($fontsize, $key);
+  }
+  @warn "Unknown `#{$key}` in $fontsize.";
+  @return null;
+}
+
+// Возвращает значение font-weidth по ключу
+// из ассоциативного массива $fontweidth
+@function fw($key) {
+  @if map-has-key($fontweidth, $key) {
+    @return map-get($fontweidth, $key);
+  }
+  @warn "Unknown `#{$key}` in $fontweidth.";
+  @return null;
+}
+
+// Возвращает значение без единиц измерения
+// $number - Number to remove unit from
+// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Конвертирует полученное значение px, em, vw, vh => rem
+// где 1rem = 16px
+@function rem($number) {
+  @return (strip-unit($number) / 16) * 1rem;
+}
+
+/* 
+Пример
+https://youtu.be/T_zHRPpc1-w?t=3304
+
+все font-size оборачивеам в rem $fz-l: rem(16px)
+
+и в селекторе тега html по медиазапросам уменьшаем font-size
+html {
+  font-size: 11px;
+
+  @media(min-widht: 1200px{
+    font-size: 16px;
+  }
+  @media(min-widht: 992px{
+    font-size: 15px;
+  }
+  @media(min-widht: 768px{
+    font-size: 14px;
+  }
+  @media(min-widht: 576px{
+    font-size: 13px;
+  }
+  @media(min-widht: 375px{
+    font-size: 12px;
+  }
+}
+ */
+
+@mixin opensans($fz: fz(sm), $lh: 1.69) {
+  font-family: "Open Sans", sans-serif;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: fw(regular);
+}
+
+@mixin montserrat($fz: fz(xl), $lh: 1.42) {
+  font-family: "Montserrat", sans-serif;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: fw(bold);
+}
+
+@mixin respond-to($point) {
+  @if map-has-key($breakpoints, $point) {
+    @media (max-width: #{map-get($breakpoints, $point)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$point}`. "
+        + "Please make sure it is defined in `$breakpoint` map.";
+  }
+}
+
+@mixin respond-from($point) {
+  @if map-has-key($breakpoints-aft, $point) {
+    @media (min-width: #{map-get($breakpoints-aft, $point)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$point}`. "
+        + "Please make sure it is defined in `$breakpoints-aft` map.";
+  }
+}
+
+// ограничить многострочный текст
+@mixin limitstr($str: 2) {
+  -webkit-line-clamp: $str; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;
+}
