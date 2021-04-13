@@ -47,6 +47,11 @@ body {
 .footer {
   flex: 0 0 auto;
 }
+.f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* *******************************
 CONTAINER
 ******************************* */
@@ -62,9 +67,28 @@ CONTAINER
 /* *******************************
 TITLE
 ******************************* */
-.title {
-  @include montserrat();
+.montserrat {
+  @include montserrat(fz(sm), 1.69);
   color: clr(title-color);
+}
+.title {
+  font-size: fz(xl);
+  line-height: 1.417;
+
+  &.title--decor {
+    position: relative;
+    margin-bottom: 22px;
+  }
+
+  &--decor::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 2px;
+    background-color: clr(title-decor);
+  }
 }
 /* *******************************
 NAVIGATION
@@ -86,6 +110,7 @@ NAVIGATION
     display: block;
     font-size: fz(sm);
     line-height: 1.375;
+    white-space: nowrap;
   }
 }
 /* *******************************
@@ -134,9 +159,21 @@ HOVER-LINK
   }
 }
 /* *******************************
-SUBSCRIBE
+bbutton
 ******************************* */
-
+.button {
+  &-small {
+  }
+}
+/* *******************************
+FORM
+******************************* */
+.form {
+  &__input {
+  }
+  &__btn {
+  }
+}
 /* *******************************
 SOCIAL-MEDIA
 ******************************* */
