@@ -68,29 +68,50 @@ CONTAINER
   }
 }
 /* *******************************
-TITLE
+TITLE SLOGAN
 ******************************* */
 .montserrat {
   @include montserrat(fz(sm), 1.69);
   color: clr(title-color);
 }
+
 .title {
+  @extend .montserrat;
   font-size: fz(xl);
   line-height: 1.417;
+}
 
-  &.title--decor {
+.slogan {
+  &__title {
     position: relative;
-    margin-bottom: 22px;
+    @extend .title;
+    padding-bottom: 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 200px;
+      height: 2px;
+      background-color: clr(title-decor);
+      border-radius: 1px;
+    }
   }
 
-  &--decor::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 200px;
-    height: 2px;
-    background-color: clr(title-decor);
+  &__subtitle {
+    padding-top: 20px;
+  }
+
+  &--center {
+    .slogan__title,
+    .slogan__subtitle {
+      text-align: center;
+    }
+    .slogan__title::after {
+      right: 0;
+      margin: 0 auto;
+    }
   }
 }
 /* *******************************
@@ -122,6 +143,7 @@ LOGO
   height: 58px;
   padding: 0 15px;
   box-sizing: content-box;
+
   &__img {
     height: 100%;
     object-fit: cover;
@@ -160,7 +182,7 @@ HOVER-LINK
   }
 }
 /* *******************************
-bbutton
+BUTTON
 ******************************* */
 .button {
   width: 160px;
@@ -206,7 +228,7 @@ FORM
   }
 }
 /* *******************************
-SOCIAL-MEDIA
+slogan
 ******************************* */
 
 /* *******************************
