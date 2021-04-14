@@ -228,9 +228,27 @@ FORM
   }
 }
 /* *******************************
-slogan
+BREADCRUMBS
 ******************************* */
+.breadcrumbs {
+  padding: 14px 0;
+  background-color: rgba(clr(footer-bg-color), 0.5);
+  &__list {
+    display: flex;
 
+    &-item:not(:last-child) {
+      padding-right: 4px;
+
+      &::after {
+        content: "/";
+        margin-left: -4px;
+      }
+    }
+
+    &-link {
+    }
+  }
+}
 /* *******************************
 SLICK-DOTS
 ******************************* */
