@@ -46,47 +46,78 @@ FOOTER
 ******************************* */
 .footer {
   &__top {
+    padding: 60px 0 80px;
+    background-color: clr(footer-bg-color);
+  }
+  &__top-container {
+    display: flex;
   }
   &__top-contact {
+    flex-basis: 50%;
+    padding-right: 15px;
   }
-  &__top-title {
+  &__top-title,
+  &__top-lead {
+    margin-bottom: 15px;
   }
   &__top-lead {
+    max-width: 480px;
   }
   &__top-contact-link {
+    display: inline-flex;
+    font-size: fz(xs);
+    font-weight: fw(semi-bold);
+    color: clr(title-color);
+    margin-bottom: 22px;
   }
-
-  &__form {
-  }
-
-  &__top-social {
-  }
-
+  &__top-social,
   &__top-menu {
+    flex-basis: 25%;
+  }
+  &__top-social,
+  &__top-menu {
+    padding-left: 8.9% !important;
   }
   &__copy {
+    padding: 40px 0;
+    background-color: clr(title-color);
   }
   &__copy-text {
+    text-align: center;
+    color: clr(title-decor);
   }
 }
 .sub-menu {
-  &__item {
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
   }
   &__link {
+    display: flex;
+    align-items: center;
+    font-size: fz(xs);
+    font-weight: fw(semi-bold);
+    color: clr(social-color);
+    svg {
+      margin-right: 12px;
+    }
   }
 }
 .icon-email {
+  width: 16px;
+  height: 16px;
+  color: clr(title-color);
+  margin-right: 15px;
 }
-.icon-facebook {
-}
-.icon-instagram {
-}
-.icon-pinterest {
-}
-.icon-whatsapp {
-}
+.icon-facebook,
+.icon-instagram,
+.icon-pinterest,
+.icon-whatsapp,
 .icon-youtube {
+  width: 16px;
+  height: 18px;
+  color: clr(social-color);
 }
+
 /* *******************************
 CRUMBS
 ******************************* */

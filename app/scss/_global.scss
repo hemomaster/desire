@@ -12,27 +12,9 @@ body {
   background-color: clr(white-color);
   color: clr(text-color);
 }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
-
-.icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-
+/* *******************************
+SITE SKELETON 
+******************************* */
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -46,6 +28,27 @@ body {
 .header,
 .footer {
   flex: 0 0 auto;
+}
+/* *******************************
+PRIMARY CLASSES
+******************************* */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 .f-center {
   display: flex;
@@ -100,8 +103,6 @@ NAVIGATION
   }
   &__list:last-of-type {
     margin-right: 45px;
-  }
-  &__list-item {
   }
   &__list-item:not(:last-child) {
     margin-right: 80px;
@@ -162,16 +163,46 @@ HOVER-LINK
 bbutton
 ******************************* */
 .button {
+  width: 160px;
+  font-weight: fw(semi-bold);
+  color: clr(buttun-color);
+  padding: 6px 12px;
+  background-color: clr(title-color);
+  text-align: center;
+  border-radius: 21px;
   &-small {
+    width: 130px;
   }
 }
 /* *******************************
 FORM
 ******************************* */
 .form {
+  display: flex;
+  align-items: center;
   &__input {
+    flex: 1;
+    border: 1px solid rgba(clr(title-color), 0.7);
+    border-radius: 21px;
+    color: clr(copyrait-color);
+    background-color: transparent;
+    padding: 6px 10px 6px 18px;
+    margin-right: 10px;
+
+    &::placeholder {
+      font-family: inherit;
+      font-size: inherit;
+      color: currentColor;
+    }
   }
   &__btn {
+    flex-shrink: 0;
+  }
+  :valid {
+    border-color: rgba(clr(title-color), 0.7);
+  }
+  :invalid {
+    border-color: red;
   }
 }
 /* *******************************

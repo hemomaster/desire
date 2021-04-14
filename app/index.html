@@ -82,8 +82,8 @@
         <p>Content</p>
       </main>
       <footer class="footer">
-        <div class="container">
-          <div class="footer__top">
+        <div class="footer__top">
+          <div class="container footer__top-container">
             <div class="footer__top-contact">
               <h2 class="footer__top-title montserrat">Contact Us</h2>
               <p class="footer__top-lead">
@@ -95,12 +95,12 @@
                 class="footer__top-contact-link f-center hover-link"
               >
                 <svg class="icon icon-email">
-                  <use xlink:href="./images/symbol-defs.svg#icon_email"></use>
+                  <use xlink:href="./images/symbol-defs.svg#icon-email"></use>
                 </svg>
                 <span>ouremailaddress@email.com</span>
               </a>
               <form
-                class="footer__form form"
+                class="form footer__form"
                 action="./subscribe.php"
                 method="get"
               >
@@ -115,11 +115,7 @@
             </div>
             <ul class="footer__top-social sub-menu">
               <li class="sub-menu__item">
-                <a
-                  href="#"
-                  class="sub-menu__link f-center hover-link"
-                  target="_blank"
-                >
+                <a href="#" class="sub-menu__link hover-link" target="_blank">
                   <svg class="icon icon-facebook">
                     <use
                       xlink:href="./images/symbol-defs.svg#icon-facebook"
@@ -129,10 +125,7 @@
                 >
               </li>
               <li class="sub-menu__item">
-                <a
-                  href="#"
-                  class="sub-menu__link f-center hover-link"
-                  target="_blank"
+                <a href="#" class="sub-menu__link hover-link" target="_blank"
                   ><svg class="icon icon-instagram">
                     <use
                       xlink:href="./images/symbol-defs.svg#icon-instagram"
@@ -142,10 +135,7 @@
                 >
               </li>
               <li class="sub-menu__item">
-                <a
-                  href="#"
-                  class="sub-menu__link f-center hover-link"
-                  target="_blank"
+                <a href="#" class="sub-menu__link hover-link" target="_blank"
                   ><svg class="icon icon-pinterest">
                     <use
                       xlink:href="./images/symbol-defs.svg#icon-pinterest"
@@ -155,10 +145,7 @@
                 >
               </li>
               <li class="sub-menu__item">
-                <a
-                  href="#"
-                  class="sub-menu__link f-center hover-link"
-                  target="_blank"
+                <a href="#" class="sub-menu__link hover-link" target="_blank"
                   ><svg class="icon icon-whatsapp">
                     <use
                       xlink:href="./images/symbol-defs.svg#icon-whatsapp"
@@ -168,10 +155,7 @@
                 >
               </li>
               <li class="sub-menu__item">
-                <a
-                  href="#"
-                  class="sub-menu__link f-center hover-link"
-                  target="_blank"
+                <a href="#" class="sub-menu__link hover-link" target="_blank"
                   ><svg class="icon icon-youtube">
                     <use
                       xlink:href="./images/symbol-defs.svg#icon-youtube"
@@ -182,21 +166,31 @@
               </li>
             </ul>
             <ul class="footer__top-menu sub-menu">
-              <li class="sub-menu__link">
-                <a href="#" class="sub-menu__link">Delivery</a>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link hover-link"
+                  ><span>Delivery</span></a
+                >
               </li>
-              <li class="sub-menu__link">
-                <a href="#" class="sub-menu__link">FAQ</a>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link hover-link"
+                  ><span>FAQ</span></a
+                >
               </li>
-              <li class="sub-menu__link">
-                <a href="#" class="sub-menu__link">Help</a>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link hover-link"
+                  ><span>Help</span></a
+                >
               </li>
-              <li class="sub-menu__link">
-                <a href="#" class="sub-menu__link">More About Us</a>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link hover-link"
+                  ><span>More About Us</span></a
+                >
               </li>
             </ul>
           </div>
-          <div class="footer__copy">
+        </div>
+        <div class="footer__copy">
+          <div class="container">
             <p class="footer__copy-text">
               674 Gonzales Drive. Washington, PA 15301
             </p>
