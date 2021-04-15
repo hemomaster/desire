@@ -19,6 +19,7 @@
 // до 992px
 @include respond-to(xl) {
   .hero::after {
+    background-image: url("../images/slider-bg-940w.jpg");
     height: 460px;
   }
   .hero__slide-img {
@@ -171,6 +172,7 @@
     padding-bottom: 20px;
   }
   .hero::after {
+    background-image: url("../images/slider-bg-575w.jpg");
     height: 100%;
   }
   .hero__slide-img {
