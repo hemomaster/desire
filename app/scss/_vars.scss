@@ -50,28 +50,31 @@ $fontweidth: (
 /* *******************************
 BREAKPOINTS
 ******************************* */
+// ОТ и выше
 $breakpoints: (
-  xxs: 0,
-  xs: 375px,
-  sm: 414px,
-  md: 576px,
-  lg: 768px,
+  xxxs: 0,
+  xxs: 375px,
+  xs: 414px,
+  sm: 576px,
+  md: 768px,
+  lg: 800px,
   xl: 992px,
   xxl: 1024px,
   xxxl: 1200px,
   xxxxl: 1440px,
 );
 
-$breakpoints-aft: (
-  xxs: map-get($breakpoints, xxs) + 1,
-  xs: map-get($breakpoints, xs) + 1,
-  sm: map-get($breakpoints, sm) + 1,
-  md: map-get($breakpoints, md) + 1,
-  lg: map-get($breakpoints, lg) + 1,
-  xl: map-get($breakpoints, xl) + 1,
-  xxl: map-get($breakpoints, xxl) + 1,
-  xxxl: map-get($breakpoints, xxxl) + 1,
-  xxxxl: map-get($breakpoints, xxxxl) + 1,
+// ДО
+$breakpoints-to: (
+  xxs: map-get($breakpoints, xxs) - 0.02,
+  xs: map-get($breakpoints, xs) - 0.02,
+  sm: map-get($breakpoints, sm) - 0.02,
+  md: map-get($breakpoints, md) - 0.02,
+  lg: map-get($breakpoints, lg) - 0.02,
+  xl: map-get($breakpoints, xl) - 0.02,
+  xxl: map-get($breakpoints, xxl) - 0.02,
+  xxxl: map-get($breakpoints, xxxl) - 0.02,
+  xxxxl: map-get($breakpoints, xxxxl) - 0.02,
 );
 /* *******************************
 FUNCTION AND MIXIN
@@ -175,25 +178,27 @@ html {
   font-weight: fw(bold);
 }
 
+// ДО указанного значения
 @mixin respond-to($point) {
-  @if map-has-key($breakpoints, $point) {
-    @media (max-width: #{map-get($breakpoints, $point)}) {
+  @if map-has-key($breakpoints-to, $point) {
+    @media (max-width: #{map-get($breakpoints-to, $point)}) {
       @content;
     }
   } @else {
     @warn "Unfortunately, no value could be retrieved from `#{$point}`. "
-        + "Please make sure it is defined in `$breakpoint` map.";
+        + "Please make sure it is defined in `$breakpoint-to` map.";
   }
 }
 
+// ОТ указанного значения и выше
 @mixin respond-from($point) {
-  @if map-has-key($breakpoints-aft, $point) {
-    @media (min-width: #{map-get($breakpoints-aft, $point)}) {
+  @if map-has-key($breakpoints, $point) {
+    @media (min-width: #{map-get($breakpoints, $point)}) {
       @content;
     }
   } @else {
     @warn "Unfortunately, no value could be retrieved from `#{$point}`. "
-        + "Please make sure it is defined in `$breakpoints-aft` map.";
+        + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
 

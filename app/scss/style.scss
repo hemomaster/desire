@@ -20,7 +20,7 @@ HEADER
     margin: 0 auto;
 
     &.logo {
-      width: 97px;
+      width: 100px;
       height: 31px;
     }
   }
@@ -105,6 +105,30 @@ SIDE-MENU
     }
   }
 
+  &__nav {
+    display: none;
+    .nav {
+      &__list {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      &__list:last-of-type {
+        margin-right: 0;
+      }
+      &__list-item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      &__list-link {
+        font-size: fz(md);
+        padding: 8px 0;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+
   .icon-close {
     width: 26px;
     height: 26px;
@@ -157,6 +181,9 @@ FOOTER
     color: clr(title-decor);
   }
 }
+/* *******************************
+SUB-MENU
+******************************* */
 .sub-menu {
   &__item:not(:last-child) {
     margin-bottom: 15px;
@@ -169,6 +196,9 @@ FOOTER
     color: clr(social-color);
     svg {
       margin-right: 12px;
+    }
+    span {
+      white-space: nowrap;
     }
   }
 }
@@ -187,10 +217,6 @@ FOOTER
   height: 18px;
   color: clr(social-color);
 }
-
-/* *******************************
-CRUMBS
-******************************* */
 
 /* *******************************
 ABOUT
@@ -235,3 +261,7 @@ PARTNERS
 /* *******************************
 CONTACT
 ******************************* */
+/* *******************************
+MEDIA
+******************************* */
+@import "./media";
