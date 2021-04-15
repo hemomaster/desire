@@ -178,7 +178,7 @@ FOOTER
   }
   &__copy-text {
     text-align: center;
-    color: clr(title-decor);
+    color: lighten(clr(title-decor), 15%);
   }
 }
 /* *******************************
@@ -193,7 +193,7 @@ SUB-MENU
     align-items: center;
     font-size: fz(xs);
     font-weight: fw(semi-bold);
-    color: clr(social-color);
+    color: darken(clr(social-color), 15%);
     svg {
       margin-right: 12px;
     }

@@ -4,7 +4,7 @@
   https://youtu.be/Nxg6UfofZX0
   
   Верстка сайта. https://youtu.be/Nxg6UfofZX0?t=13119
-  Адаптив. 
+  Адаптив. https://youtu.be/YMklBBnKJDg?list=RDCMUCE_w6FxGfRKH2fU76raVeog&t=4368
 -->
 <html lang="en">
   <head>
@@ -29,6 +29,13 @@
     />
     <link rel="manifest" href="./images/favicon/site.webmanifest" />
     <title>DESIRE | Furniture for life</title>
+    <link
+      rel="preload"
+      href="./fonts/Montserrat-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
     <script src="js/main.min.js" defer></script>
   </head>
@@ -70,14 +77,18 @@
                 >
               </li>
             </ul>
-            <button class="header__btn" type="button">
+            <button class="header__btn" type="button" aria-label="open menu">
               <svg class="icon header__btn-icon">
                 <use xlink:href="./images/symbol-defs.svg#icon_burger"></use>
               </svg>
             </button>
             <aside class="side-menu">
               <div class="side-menu__body">
-                <button class="side-menu__close" type="button">
+                <button
+                  class="side-menu__close"
+                  type="button"
+                  aria-label="close menu"
+                >
                   <svg class="icon icon-close side-menu__close-svg">
                     <use xlink:href="./images/symbol-defs.svg#icon-close"></use>
                   </svg>
