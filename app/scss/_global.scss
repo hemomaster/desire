@@ -234,26 +234,45 @@ BREADCRUMBS
 .breadcrumbs {
   padding: 14px 0;
   background-color: rgba(clr(footer-bg-color), 0.5);
+
   &__list {
     display: flex;
+    overflow-x: auto;
 
     &-item:not(:last-child) {
       padding-right: 4px;
+      white-space: nowrap;
 
       &::after {
         content: "/";
         margin-left: -4px;
       }
     }
-
     &-link {
+      font-size: fz(xs);
+      white-space: inherit;
     }
   }
 }
 /* *******************************
-SLICK-DOTS
+SWIPER-PAGINATION
 ******************************* */
+.swiper-pagination {
+  position: static;
+  font-size: 0;
 
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 15px;
+    background-color: clr(title-color);
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background-color: clr(yellow-color);
+    }
+  }
+}
 /* *******************************
 COLLECTION
 ******************************* */

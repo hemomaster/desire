@@ -217,11 +217,48 @@ SUB-MENU
   height: 18px;
   color: clr(social-color);
 }
-
 /* *******************************
-ABOUT
+HERO
 ******************************* */
+.hero {
+  position: relative;
+  padding-bottom: 70px;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // height: 81%;
+    height: 720px;
+    background: clr(footer-bg-color) url("../images/slider-bg.jpg") center
+      top/cover no-repeat;
+  }
+
+  &__slide-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__slide-img {
+    max-width: 700px;
+    height: 815px;
+    object-fit: cover;
+    padding-right: 20px;
+    margin-left: -14%;
+  }
+
+  &__slide-slogan {
+    max-width: 635px;
+
+    .slogan__title {
+      font-size: fz(xxxl);
+      line-height: 1.218;
+    }
+  }
+}
 /* *******************************
 PROMO
 ******************************* */

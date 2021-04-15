@@ -8,6 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
     else enableScroll();
   };
 
+  const heroSlider = new Swiper(".hero__container", {
+    slidesPerView: 1,
+    loop: true,
+    effect: "fade",
+
+    fadeEffect: {
+      crossFade: true,
+    },
+
+    pagination: {
+      el: ".hero__pagination",
+      clickable: true,
+    },
+  });
+
   // Переключаем элемент ".side-menu" если была нажат
   // пункт меню ".nav__list-link",
   // кнопка закрытия ".side-menu__close",
