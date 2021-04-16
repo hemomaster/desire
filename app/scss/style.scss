@@ -270,15 +270,45 @@ NEW COLLECTION
     margin: 0 auto;
     margin-bottom: 20px;
   }
-
-  &__links {
-  }
 }
-
 /* *******************************
 DECOR
 ******************************* */
+.decor {
+  position: relative;
+  min-height: 600px;
+  height: 1px;
+  background: clr(footer-bg-color) url("../images/decor-bg.jpg") center/cover
+    no-repeat;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(clr(white-color), 0.8);
+  }
+  &__container {
+    position: relative;
+    z-index: 10;
+    @extend %f-center;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  &__slogan {
+    max-width: 505px;
+
+    .slogan__title {
+      font-size: fz(xxl);
+    }
+
+    .slogan__subtitle {
+      max-width: 480px;
+    }
+  }
+}
 /* *******************************
 HOW IT WORKS
 ******************************* */

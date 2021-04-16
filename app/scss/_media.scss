@@ -34,6 +34,9 @@
   .hero__slide-slogan .slogan__title {
     font-size: 46px;
   }
+  .decor::after {
+    background-image: url("../images/decor-bg-940w.jpg");
+  }
 }
 
 // до 800px
@@ -84,6 +87,9 @@
   }
   .collection__link-info {
     display: none;
+  }
+  .decor {
+    min-height: 500px;
   }
 }
 
@@ -215,6 +221,19 @@
     z-index: 100;
     padding-top: 25px;
   }
+
+  .decor {
+    min-height: 400px;
+  }
+  .decor::after {
+    background-image: url("../images/decor-bg-575w.jpg");
+  }
+  .decor__slogan {
+    max-width: 300px;
+  }
+  .decor__slogan .slogan__title {
+    font-size: fz(xl);
+  }
 }
 
 // до 414px
@@ -258,5 +277,11 @@
   }
   .collection__link {
     height: 290px;
+  }
+}
+// до 375px
+@include respond-to(xxs) {
+  .decor__slogan .slogan__title {
+    font-size: fz(xl)-2;
   }
 }
