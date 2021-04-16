@@ -210,6 +210,18 @@ html {
   overflow: hidden;
 }
 
+@mixin f-center($jc: space-between) {
+  display: flex;
+  align-items: center;
+  justify-content: $jc;
+}
+
+%f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin transit($prop: all) {
   transition: $prop 0.3s ease-in-out;
 }

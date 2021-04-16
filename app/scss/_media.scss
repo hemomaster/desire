@@ -1,5 +1,8 @@
-// до 120px
+// до 1200px
 @include respond-to(xxxl) {
+  .section {
+    padding: 60px 0 80px;
+  }
   .hero::after {
     height: 565px;
   }
@@ -18,6 +21,9 @@
 
 // до 992px
 @include respond-to(xl) {
+  .section {
+    padding: 50px 0 70px;
+  }
   .hero::after {
     background-image: url("../images/slider-bg-940w.jpg");
     height: 460px;
@@ -32,6 +38,9 @@
 
 // до 800px
 @include respond-to(lg) {
+  .section {
+    padding: 30px 0 50px;
+  }
   .header {
     padding: 25px 0;
   }
@@ -69,6 +78,12 @@
   }
   .footer__copy {
     padding: 30px 0;
+  }
+  .hero {
+    padding-bottom: 55px;
+  }
+  .collection__link-info {
+    display: none;
   }
 }
 
@@ -137,6 +152,9 @@
 
 // до 576px
 @include respond-to(sm) {
+  .section {
+    padding: 20px 0 40px;
+  }
   .title {
     font-size: fz(lg);
   }
@@ -201,6 +219,9 @@
 
 // до 414px
 @include respond-to(xs) {
+  .section {
+    padding: 15px 0 25px;
+  }
   .form {
     flex-direction: column;
     align-items: flex-end;
@@ -234,5 +255,8 @@
   }
   .hero__slide-slogan .slogan__title {
     font-size: 28px;
+  }
+  .collection__link {
+    height: 290px;
   }
 }

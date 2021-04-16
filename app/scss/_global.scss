@@ -50,10 +50,8 @@ PRIMARY CLASSES
   stroke: currentColor;
   fill: currentColor;
 }
-.f-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.section {
+  padding: 80px 0 100px;
 }
 /* *******************************
 CONTAINER
@@ -62,10 +60,10 @@ CONTAINER
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
-
-  &.container__fluid {
-    max-width: 1920px;
-  }
+}
+.container-fluid {
+  @extend .container;
+  max-width: 1920px;
 }
 /* *******************************
 TITLE SLOGAN
@@ -78,14 +76,16 @@ TITLE SLOGAN
 .title {
   @extend .montserrat;
   font-size: fz(xl);
+  font-weight: fw(bold);
   line-height: 1.417;
 }
 
 .slogan {
   &__title {
+    display: block;
     position: relative;
     @extend .title;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 
     &::after {
       content: "";
@@ -100,6 +100,7 @@ TITLE SLOGAN
   }
 
   &__subtitle {
+    display: block;
     padding-top: 20px;
   }
 
@@ -276,7 +277,92 @@ SWIPER-PAGINATION
 /* *******************************
 COLLECTION
 ******************************* */
+.collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 30px;
 
+  &__link {
+    position: relative;
+    display: block;
+    width: clamp(290px, 100%, 500px);
+    height: 350px;
+    margin: 0 auto;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @extend %f-center;
+      flex-direction: column;
+      background-color: rgba(clr(white-color), 0.6);
+      padding: 0 10px;
+      transform: scale(0);
+      opacity: 0;
+      transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    &:hover .collection__link-info {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    &-info-title {
+      position: relative;
+      @extend .montserrat;
+      font-size: fz(md);
+      line-height: 1.2;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        width: 80%;
+        height: 1px;
+        background-color: clr(title-decor);
+      }
+    }
+    &-info-list {
+      display: flex;
+      align-items: center;
+    }
+
+    &-info-item {
+      font-size: fz(xs);
+      font-weight: fw(semi-bold);
+      color: clr(text-small);
+
+      &:not(:last-child) {
+        position: relative;
+        padding-right: 7px;
+        margin-right: 7px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 2px;
+          right: 0;
+          width: 1px;
+          height: 22px;
+          background-color: clr(text-small);
+        }
+      }
+    }
+  }
+}
 /* *******************************
 EMAIL LINK
 ******************************* */
