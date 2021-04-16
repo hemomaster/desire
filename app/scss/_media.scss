@@ -34,7 +34,7 @@
   .hero__slide-slogan .slogan__title {
     font-size: 46px;
   }
-  .decor::after {
+  .decor {
     background-image: url("../images/decor-bg-940w.jpg");
   }
 }
@@ -154,6 +154,38 @@
   .hero__slide-slogan .slogan__title {
     font-size: fz(xl);
   }
+  .steps {
+    flex-direction: column;
+    justify-content: center;
+
+    &::before {
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+    }
+    &__item {
+      width: auto;
+      height: 195px;
+      padding: 0 54% 10px 0;
+
+      &::before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-100%);
+        width: 20px;
+        height: 2px;
+      }
+
+      &:nth-child(even) {
+        padding: 0 0 10px 55%;
+
+        &::before {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
 }
 
 // до 576px
@@ -221,18 +253,38 @@
     z-index: 100;
     padding-top: 25px;
   }
-
   .decor {
-    min-height: 400px;
-  }
-  .decor::after {
     background-image: url("../images/decor-bg-575w.jpg");
+    min-height: 400px;
   }
   .decor__slogan {
     max-width: 300px;
   }
   .decor__slogan .slogan__title {
     font-size: fz(xl);
+  }
+  .steps {
+    &::before {
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    &__item {
+      padding: 0 0 10px 20px;
+
+      &::before {
+        left: 0;
+        transform: translateX(0);
+        width: 20px;
+        height: 2px;
+      }
+
+      &:nth-child(even) {
+        padding: 0 0 10px 20px;
+      }
+    }
   }
 }
 

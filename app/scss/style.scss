@@ -312,7 +312,85 @@ DECOR
 /* *******************************
 HOW IT WORKS
 ******************************* */
+.stage {
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
 
+.steps {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(clr(title-color), 0.7);
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    padding: 0 5px 220px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-100%);
+      left: 0;
+      width: 2px;
+      height: 20px;
+      background-color: rgba(clr(title-color), 0.7);
+    }
+
+    &:nth-child(even) {
+      padding: 220px 5px 0;
+
+      &::before {
+        transform: translateY(0);
+      }
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    &-icon {
+      color: clr(black-color);
+      margin-right: 15px;
+    }
+
+    &-title {
+      @extend .montserrat;
+    }
+    &-descr {
+      @include limitstr(4);
+    }
+  }
+}
+.icon_step_1 {
+  width: 41px;
+  height: 42px;
+}
+.icon_step_2 {
+  width: 39px;
+  height: 27px;
+}
+.icon_step_3 {
+  width: 38px;
+  height: 34px;
+}
 /* *******************************
 GALLERY
 ******************************* */
