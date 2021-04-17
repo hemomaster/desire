@@ -336,10 +336,18 @@ HOW IT WORKS
 
   &__item {
     position: relative;
+    flex-basis: 270px;
     display: flex;
     flex-direction: column;
-    width: 270px;
-    padding: 0 5px 220px;
+    justify-content: flex-start;
+    height: 440px;
+    padding: 0 5px;
+
+    &-body {
+      // display: flex;
+      // flex-direction: column;
+      min-height: 190px;
+    }
 
     &::before {
       content: "";
@@ -353,7 +361,7 @@ HOW IT WORKS
     }
 
     &:nth-child(even) {
-      padding: 220px 5px 0;
+      justify-content: flex-end;
 
       &::before {
         transform: translateY(0);
@@ -375,7 +383,7 @@ HOW IT WORKS
       @extend .montserrat;
     }
     &-descr {
-      @include limitstr(4);
+      @include limitstr(5);
     }
   }
 }
