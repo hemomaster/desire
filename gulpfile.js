@@ -38,7 +38,7 @@ function images() {
 function scripts() {
   return src([
     "node_modules/swiper/swiper-bundle.min.js",
-    "node_modules/mixitup/dist/mixitup.js",
+    "node_modules/mixitup/dist/mixitup.min.js",
     "app/js/disableScroll.js",
     "app/js/main.js",
   ])

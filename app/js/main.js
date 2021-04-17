@@ -40,4 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".header__btn").addEventListener("click", () => {
     toggleSideMenu();
   });
+
+  // Нажатой кнопке прописуем класс активности .active
+  const initTabs = (selParentTabs, selTabs, classActive) => {
+    const parentTabs = document.querySelector(selParentTabs);
+    const tabs = parentTabs.querySelectorAll(selTabs);
+
+    parentTabs.addEventListener("click", (e) => {
+      tabs.forEach((tab) => tab.classList.remove(classActive));
+      e.target.classList.add(classActive);
+    });
+  };
+
+  // подключаю mixitup
+  // определяем селектор категории по умолчанию
+  const tabs = document.querySelectorAll(".gallery__tab");
+  const activTab = [...tabs].find((tab) => tab.classList.contains("active"));
+  const dataFilter = activTab ? activTab.dataset.filter : ".category-a";
+
+  const mixer = mixitup(".masonry", {
+    load: {
+      filter: dataFilter,
+    },
+  });
+
+  initTabs(".gallery__tabs", ".gallery__tab", "active");
+
+  //
 });

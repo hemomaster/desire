@@ -344,8 +344,6 @@ HOW IT WORKS
     padding: 0 5px;
 
     &-body {
-      // display: flex;
-      // flex-direction: column;
       min-height: 190px;
     }
 
@@ -402,6 +400,43 @@ HOW IT WORKS
 /* *******************************
 GALLERY
 ******************************* */
+.gallery {
+  %btn-active {
+    color: clr(title-color);
+    background-color: clr(controls-hover-bg);
+    border-color: clr(controls-hover-bg);
+  }
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  &__tab {
+    font-weight: fw(semi-bold);
+    font-size: fz(xs);
+    color: clr(controls-text);
+    padding: 6px 16px;
+    border: 1px solid rgba(clr(controls-border), 0.5);
+    border-radius: 20px;
+    background-color: clr(white-color);
+    white-space: nowrap;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+
+    &:hover,
+    &.active {
+      @extend %btn-active;
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__inner {
+  }
+}
 
 /* *******************************
 BLOG BOX
