@@ -452,7 +452,28 @@ POST
   &__title {
     font-size: fz(lg);
     line-height: 1.58;
-    &-link {
-    }
+  }
+}
+/* *******************************
+VIDEO-POST
+******************************* */
+.video-post {
+  @extend %f-center;
+  height: 100%;
+
+  &__link {
+    @extend %f-center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: rgba(clr(title-color), 0.4);
+  }
+  .icon-play {
+    width: 29px;
+    height: 33px;
+    color: clr(white-color);
+    fill-opacity: 0.93;
+    filter: drop-shadow(0 1px 4px black);
+    margin-right: -4px;
   }
 }

@@ -460,9 +460,63 @@ NOTICE
 }
 
 /* *******************************
-POST PREVIEW
+ABOUT
 ******************************* */
+.about {
+  margin-top: -55px;
 
+  &__header {
+    min-height: 400px;
+    height: 1px;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 240, 0.496285),
+        rgba(255, 255, 240, 0.496285)
+      ),
+      url("../images/about-header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &-container {
+      @extend %f-center;
+      height: 100%;
+    }
+
+    &-title {
+      font-size: fz(xxl);
+      line-height: 1.33;
+    }
+  }
+
+  &__content {
+    padding-top: 90px;
+    padding-bottom: 0;
+
+    &-slogan {
+      max-width: 820px;
+      margin-bottom: 20px;
+    }
+
+    &-lead {
+      max-width: 820px;
+      margin-left: auto;
+    }
+
+    &-text:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__video {
+    &-post {
+      min-height: 400px;
+      height: 1px;
+      background: clr(footer-bg-color) url("../images/about-popup-bg.jpg")
+        center/cover no-repeat;
+    }
+  }
+}
 /* *******************************
 MUSE
 ******************************* */
