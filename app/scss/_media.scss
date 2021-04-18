@@ -1,3 +1,9 @@
+// до 1440px
+@include respond-to(xxxxl) {
+  .masonry__items {
+    grid-template-rows: repeat(2, minmax(480px, 1fr));
+  }
+}
 // до 1200px
 @include respond-to(xxxl) {
   .hero::after {
@@ -13,6 +19,10 @@
   }
   .hero__slide-slogan .slogan__title {
     font-size: 68px;
+  }
+  .masonry__items {
+    grid-template-rows: repeat(2, minmax(400px, 1fr));
+    gap: 10px;
   }
 }
 
@@ -33,6 +43,15 @@
   }
   .decor {
     background-image: url("../images/decor-bg-940w.jpg");
+  }
+  .masonry__items {
+    grid-template-rows: repeat(2, minmax(250px, 1fr));
+  }
+  .gallery__tab:not(:last-child) {
+    margin-right: 15px;
+  }
+  .gallery__tab {
+    flex: 0 1 33.33%;
   }
 }
 
@@ -189,6 +208,18 @@
       }
     }
   }
+  .masonry__items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 350px);
+  }
+  .masonry__items-link:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .gallery__tab {
+    flex: 0 1 20%;
+    margin-bottom: 15px;
+  }
 }
 
 // до 576px
@@ -335,6 +366,13 @@
   }
   .collection__link {
     height: 290px;
+  }
+  .masonry__items {
+    grid-template-rows: repeat(5, 290px);
+  }
+  .gallery__tab {
+    flex: 0 1 80%;
+    margin-bottom: 10px;
   }
 }
 // до 375px
