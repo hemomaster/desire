@@ -397,5 +397,62 @@ MASONRY
   }
 }
 /* *******************************
-FEEDBACK
+POST
 ******************************* */
+.post {
+  &__link {
+    display: block;
+    position: relative;
+    height: 0;
+    padding-bottom: 55.56%;
+    margin-bottom: 20px;
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__body {
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    font-weight: fw(semi-bold);
+    font-size: fz(xs);
+    line-height: 2;
+    color: clr(social-color);
+    margin-bottom: 7px;
+
+    &-item:not(:last-child) {
+      position: relative;
+      padding-right: 8px;
+      margin-right: 8px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        right: 0;
+        height: 22px;
+        width: 1px;
+        background-color: clr(social-color);
+      }
+    }
+    &-date,
+    &-author,
+    &-category {
+      white-space: nowrap;
+    }
+  }
+  &__title {
+    font-size: fz(lg);
+    line-height: 1.58;
+    &-link {
+    }
+  }
+}

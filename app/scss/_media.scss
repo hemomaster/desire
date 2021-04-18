@@ -209,8 +209,8 @@
     }
   }
   .masonry__items {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 350px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 350px);
   }
   .masonry__items-link:first-child {
     grid-column: 1;
@@ -229,6 +229,9 @@
   }
   .title {
     font-size: fz(lg);
+  }
+  .post__title-link {
+    font-size: fz(md);
   }
   .slogan__title {
     padding-bottom: 8px;
@@ -322,6 +325,23 @@
         padding: 0 0 10px 35px;
       }
     }
+  }
+  .masonry__items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 350px);
+  }
+  .notice__inner {
+    flex-direction: column;
+  }
+  .notice__item {
+    flex-basis: 100%;
+  }
+  .notice__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
+  .post__link {
+    margin-bottom: 10px;
   }
 }
 

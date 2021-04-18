@@ -294,7 +294,7 @@ DECOR
     position: relative;
     z-index: 10;
     @extend %f-center;
-    justify-content: flex-start;
+    justify-content: start;
     height: 100%;
   }
   &__slogan {
@@ -339,7 +339,7 @@ HOW IT WORKS
     flex-basis: 270px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: start;
     height: 440px;
     padding: 0 5px;
 
@@ -434,14 +434,30 @@ GALLERY
       margin-right: 25px;
     }
   }
-
-  &__inner {
-  }
 }
 
 /* *******************************
-BLOG BOX
+NOTICE
 ******************************* */
+.notice {
+  &__title {
+    text-align: center;
+    max-width: 430px;
+    margin: 0 auto 30px;
+  }
+  &__inner {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  &__item {
+    flex-basis: 48.65%;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
 
 /* *******************************
 POST PREVIEW
