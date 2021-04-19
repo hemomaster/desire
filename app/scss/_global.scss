@@ -59,7 +59,7 @@ CONTAINER
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 15px !important;
 }
 .container-fluid {
   @extend .container;

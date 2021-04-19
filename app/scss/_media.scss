@@ -30,6 +30,13 @@
   .about .about__skils-content {
     flex-basis: 60%;
   }
+  .about .about__partners {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .about .about__partners-item {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 // до 992px
@@ -126,6 +133,13 @@
   .about .about__skils-content {
     flex-basis: 100%;
     padding-left: 15px;
+  }
+  .about .about__partners {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  .about .about__partners-item {
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -372,6 +386,13 @@
   }
   .details__content {
     padding-bottom: 8px;
+  }
+  .about .about__partners {
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  }
+  .about .about__partners-item {
+    width: 145px;
+    height: 145px;
   }
 }
 
