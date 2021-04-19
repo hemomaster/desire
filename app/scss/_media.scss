@@ -107,6 +107,10 @@
   .decor {
     min-height: 500px;
   }
+  .about__header,
+  .about__video-wrapper {
+    min-height: 300px;
+  }
 }
 
 // До 768px
@@ -343,6 +347,10 @@
   .post__link {
     margin-bottom: 10px;
   }
+  .about__header,
+  .about__video-wrapper {
+    min-height: 250px;
+  }
 }
 
 // до 414px
@@ -393,6 +401,10 @@
   .gallery__tab {
     flex: 0 1 80%;
     margin-bottom: 10px;
+  }
+  .about__header,
+  .about__video-wrapper {
+    min-height: 200px;
   }
 }
 // до 375px

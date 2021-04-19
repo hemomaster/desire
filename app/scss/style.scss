@@ -509,11 +509,16 @@ ABOUT
   }
 
   &__video {
-    &-post {
+    &-wrapper {
       min-height: 400px;
       height: 1px;
       background: clr(footer-bg-color) url("../images/about-popup-bg.jpg")
         center/cover no-repeat;
+    }
+
+    &-container {
+      @extend %f-center;
+      height: 100%;
     }
   }
 }
