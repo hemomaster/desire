@@ -3,6 +3,9 @@
   .masonry__items {
     grid-template-rows: repeat(2, minmax(480px, 1fr));
   }
+  .about .about__skils-decor {
+    flex-basis: 35%;
+  }
 }
 // до 1200px
 @include respond-to(xxxl) {
@@ -23,6 +26,9 @@
   .masonry__items {
     grid-template-rows: repeat(2, minmax(400px, 1fr));
     gap: 10px;
+  }
+  .about .about__skils-content {
+    flex-basis: 60%;
   }
 }
 
@@ -52,6 +58,9 @@
   }
   .gallery__tab {
     flex: 0 1 33.33%;
+  }
+  .about .about__skils-decor {
+    flex-basis: 40%;
   }
 }
 
@@ -110,6 +119,13 @@
   .about__header,
   .about__video-wrapper {
     min-height: 300px;
+  }
+  .about .about__skils-decor {
+    display: none;
+  }
+  .about .about__skils-content {
+    flex-basis: 100%;
+    padding-left: 15px;
   }
 }
 
@@ -350,6 +366,12 @@
   .about__header,
   .about__video-wrapper {
     min-height: 250px;
+  }
+  .details__item:not(:last-child) {
+    margin-bottom: 13px;
+  }
+  .details__content {
+    padding-bottom: 8px;
   }
 }
 
