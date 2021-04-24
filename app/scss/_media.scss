@@ -3,6 +3,10 @@
   .masonry__items {
     grid-template-rows: repeat(2, minmax(480px, 1fr));
   }
+  .gallery-page .masonry__items {
+    grid-template-rows: repeat(4, minmax(480px, 1fr));
+  }
+
   .about .about__skils-decor {
     flex-basis: 35%;
   }
@@ -26,6 +30,9 @@
   .masonry__items {
     grid-template-rows: repeat(2, minmax(400px, 1fr));
     gap: 10px;
+  }
+  .gallery-page .masonry__items {
+    grid-template-rows: repeat(4, minmax(400px, 1fr));
   }
   .about .about__skils-content {
     flex-basis: 60%;
@@ -59,6 +66,9 @@
   }
   .masonry__items {
     grid-template-rows: repeat(2, minmax(250px, 1fr));
+  }
+  .gallery-page .masonry__items {
+    grid-template-rows: repeat(4, minmax(250px, 1fr));
   }
   .gallery__tab:not(:last-child) {
     margin-right: 15px;
@@ -250,6 +260,14 @@
     grid-column: 1;
     grid-row: 1;
   }
+  .gallery-page .masonry__items {
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 350px);
+  }
+  .gallery-page .masonry__items-link:nth-child(8) {
+    grid-column: initial;
+    grid-row: initial;
+  }
   .gallery__tab {
     flex: 0 1 20%;
     margin-bottom: 15px;
@@ -364,6 +382,11 @@
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, 350px);
   }
+  .gallery-page .masonry__items {
+    // grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 350px);
+  }
+
   .notice__inner {
     flex-direction: column;
   }
@@ -440,6 +463,9 @@
   }
   .masonry__items {
     grid-template-rows: repeat(5, 290px);
+  }
+  .gallery-page .masonry__items {
+    grid-template-rows: repeat(10, 290px);
   }
   .gallery__tab {
     flex: 0 1 80%;
