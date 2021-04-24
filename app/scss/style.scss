@@ -611,9 +611,17 @@ ABOUT PAGE COLLECTION
 // .about-page__section {
 // }
 /* *******************************
-PARTNERS
+GALLERY PAGE
 ******************************* */
-
+.gallery-page {
+  .masonry__items {
+    grid-template-rows: repeat(4, minmax(550px, 1fr));
+  }
+  .masonry__items-link:nth-child(8) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
 /* *******************************
 CONTACT
 ******************************* */
