@@ -233,6 +233,8 @@ FORM
 BREADCRUMBS
 ******************************* */
 .breadcrumbs {
+  position: relative;
+  z-index: 100;
   padding: 14px 0;
   background-color: rgba(clr(footer-bg-color), 0.5);
 

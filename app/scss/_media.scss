@@ -79,6 +79,9 @@
   .about .about__skils-decor {
     flex-basis: 40%;
   }
+  .contact__map {
+    padding-bottom: 50%;
+  }
 }
 
 // до 800px
@@ -150,6 +153,9 @@
   .about .about__partners-item {
     width: 180px;
     height: 180px;
+  }
+  .contact.section {
+    margin-top: -47px;
   }
 }
 
@@ -272,6 +278,9 @@
     flex: 0 1 20%;
     margin-bottom: 15px;
   }
+  .contact__map {
+    padding-bottom: 60%;
+  }
 }
 
 // до 576px
@@ -386,7 +395,6 @@
     // grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(10, 350px);
   }
-
   .notice__inner {
     flex-direction: column;
   }
@@ -416,6 +424,9 @@
   .about .about__partners-item {
     width: 145px;
     height: 145px;
+  }
+  .contact__map {
+    padding-bottom: 80%;
   }
 }
 
@@ -475,10 +486,16 @@
   .about__video-wrapper {
     min-height: 200px;
   }
+  .contact__map {
+    padding-bottom: 100%;
+  }
 }
 // до 375px
 @include respond-to(xxs) {
   .decor__slogan .slogan__title {
     font-size: fz(xl)-2;
+  }
+  .contact__map {
+    padding-bottom: 120%;
   }
 }
