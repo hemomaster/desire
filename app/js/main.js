@@ -54,17 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // подключаю mixitup
   // определяем селектор категории по умолчанию
-  const tabs = document.querySelectorAll(".gallery__tab");
-  const activTab = [...tabs].find((tab) => tab.classList.contains("active"));
-  const dataFilter = activTab ? activTab.dataset.filter : ".category-a";
+  const masonry = document.querySelector(".masonry");
+  if (masonry) {
+    const tabs = document.querySelectorAll(".gallery__tab");
+    const activTab = [...tabs].find((tab) => tab.classList.contains("active"));
+    const dataFilter = activTab ? activTab.dataset.filter : ".category-a";
 
-  const mixer = mixitup(".masonry", {
-    load: {
-      filter: dataFilter,
-    },
-  });
+    const mixer = mixitup(masonry, {
+      load: {
+        filter: dataFilter,
+      },
+    });
 
-  initTabs(".gallery__tabs", ".gallery__tab", "active");
-
+    initTabs(".gallery__tabs", ".gallery__tab", "active");
+  }
   //
 });
