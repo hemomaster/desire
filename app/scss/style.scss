@@ -626,11 +626,6 @@ GALLERY PAGE
 CONTACT
 ******************************* */
 .contact-page .breadcrumbs {
-  // background-image: linear-gradient(
-  //   90deg,
-  //   rgba(clr(title-decor), 0.6),
-  //   rgba(clr(footer-bg-color), 0.5)
-  // );
   background-color: rgba(clr(footer-bg-color), 0.87);
 }
 .contact.section {
@@ -641,6 +636,7 @@ CONTACT
   position: relative;
   height: 0;
   padding-bottom: 36.46%;
+  background-color: #f1f1f1;
 }
 .contact__map iframe {
   position: absolute;
