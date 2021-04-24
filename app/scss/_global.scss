@@ -380,8 +380,8 @@ MASONRY
         grid-column: span 2;
         grid-row: span 2;
 
-        .masonry__items-img {
-        }
+        // .masonry__items-img {
+        // }
       }
     }
 
@@ -416,8 +416,8 @@ POST
       object-fit: cover;
     }
   }
-  &__body {
-  }
+  // &__body {
+  // }
   &__info {
     display: flex;
     flex-wrap: wrap;
