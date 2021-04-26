@@ -428,6 +428,37 @@
   .contact__map {
     padding-bottom: 80%;
   }
+  .contact {
+    .form__group {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .form__input {
+      margin-right: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .form__btn {
+      align-self: flex-end;
+    }
+  }
+
+  .contact__content-slogan {
+    margin-bottom: 15px;
+  }
+  .contact__content-social {
+    margin-bottom: 10px;
+  }
+  .contact__content-text:last-of-type {
+    margin-bottom: 10px;
+  }
+  .contact__carousel-container {
+    margin-bottom: 20px;
+  }
 }
 
 // до 414px
@@ -442,7 +473,10 @@
   .form__input {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
   .header {
     padding: 15px 0;
@@ -489,6 +523,9 @@
   .contact__map {
     padding-bottom: 100%;
   }
+  .contact__form {
+    align-items: stretch;
+  }
 }
 // до 375px
 @include respond-to(xxs) {
@@ -497,5 +534,8 @@
   }
   .contact__map {
     padding-bottom: 120%;
+  }
+  .contact .carousel-slide {
+    height: 125px;
   }
 }

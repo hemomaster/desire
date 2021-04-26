@@ -26,19 +26,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // слайдер contact page
   const carouselSlider = new Swiper(".contact__carousel-container", {
-    slidesPerView: 10,
-    spaceBetween: 20,
-    slidesPerGroup: 4,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    slidesPerGroup: 2,
     loop: true,
-    // effect: "fade",
-
-    // fadeEffect: {
-    //   crossFade: true,
-    // },
-
     pagination: {
       el: ".contact__carousel-pagination",
       clickable: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+      1200: {
+        slidesPerView: 5,
+      },
+      // when window width is >= 1440px
+      1440: {
+        slidesPerView: 7,
+        slidesPerGroup: 4,
+      },
     },
   });
 
