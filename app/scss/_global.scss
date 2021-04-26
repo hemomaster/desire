@@ -193,10 +193,25 @@ BUTTON
   background-color: clr(title-color);
   text-align: center;
   border-radius: 21px;
+  @include transit(background-color);
+
+  &:hover {
+    background-color: darken(clr(title-color), 20%);
+  }
 
   &--small {
     width: 130px;
   }
+}
+/* *******************************
+EMAIL LINK
+******************************* */
+.email-link {
+  @extend %f-center;
+  display: inline-flex;
+  font-size: fz(xs);
+  font-weight: fw(semi-bold);
+  color: clr(title-color);
 }
 /* *******************************
 FORM

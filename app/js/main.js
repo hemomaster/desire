@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     else enableScroll();
   };
 
+  // слайдер первого экрана home page
   const heroSlider = new Swiper(".hero__container", {
     slidesPerView: 1,
     loop: true,
@@ -19,6 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pagination: {
       el: ".hero__pagination",
+      clickable: true,
+    },
+  });
+
+  // слайдер contact page
+  const carouselSlider = new Swiper(".contact__carousel-container", {
+    slidesPerView: 10,
+    spaceBetween: 20,
+    slidesPerGroup: 4,
+    loop: true,
+    // effect: "fade",
+
+    // fadeEffect: {
+    //   crossFade: true,
+    // },
+
+    pagination: {
+      el: ".contact__carousel-pagination",
       clickable: true,
     },
   });

@@ -71,7 +71,7 @@
                 >
               </li>
               <li class="nav__list-item">
-                <a href="#" class="nav__list-link montserrat hover-link"
+                <a href="#" class="nav__list-link montserrat hover-link active"
                   ><span>Contact</span></a
                 >
               </li>
@@ -169,12 +169,54 @@
               loading="lazy"
             ></iframe>
           </section>
-          <section class="contact__content">
+          <section class="section contact__content">
             <div class="container">
               <div class="slogan contact__content-slogan">
                 <h3 class="slogan__title">Contact Us</h3>
               </div>
-              <div class="contact__content-lead">
+              <div class="contact__content-info">
+                <ul class="contact__content-social social-menu">
+                  <li class="social-menu__item">
+                    <a href="#" class="social-menu__link" target="_blank">
+                      <svg class="icon icon-facebook">
+                        <use
+                          xlink:href="./images/symbol-defs.svg#icon-facebook"
+                        ></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-menu__item">
+                    <a href="#" class="social-menu__link" target="_blank"
+                      ><svg class="icon icon-instagram">
+                        <use
+                          xlink:href="./images/symbol-defs.svg#icon-instagram"
+                        ></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-menu__item">
+                    <a href="#" class="social-menu__link" target="_blank"
+                      ><svg class="icon icon-pinterest">
+                        <use
+                          xlink:href="./images/symbol-defs.svg#icon-pinterest"
+                        ></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-menu__item">
+                    <a href="#" class="social-menu__link" target="_blank"
+                      ><svg class="icon icon-whatsapp">
+                        <use
+                          xlink:href="./images/symbol-defs.svg#icon-whatsapp"
+                        ></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-menu__item">
+                    <a href="#" class="social-menu__link" target="_blank"
+                      ><svg class="icon icon-youtube">
+                        <use
+                          xlink:href="./images/symbol-defs.svg#icon-youtube"
+                        ></use></svg
+                    ></a>
+                  </li>
+                </ul>
                 <p class="contact__content-text">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum,
                   nobis ipsam, tempora odio repellat officiis corrupti
@@ -193,47 +235,186 @@
                   temporibus ullam, quis aperiam natus perspiciatis quas tempore
                   mollitia molestiae magni molestias iste. Incidunt, aspernatur.
                 </p>
+                <a href="tel:" class="contact__content-tel hover-link"
+                  ><span>(415) 829-7934</span></a
+                >
+                <address class="contact__content-address">
+                  725 Green St<br />
+                  San Francisco, California(CA), 94133
+                </address>
+                <a
+                  href="mailto:ouremailaddress@email.com"
+                  class="contact__content-email email-link hover-link"
+                >
+                  <svg class="icon icon-email">
+                    <use xlink:href="./images/symbol-defs.svg#icon-email"></use>
+                  </svg>
+                  <span>ouremailaddress@email.com</span>
+                </a>
+                <form action="./feedback.php" class="form contact__form">
+                  <div class="form__group">
+                    <input
+                      class="form__input"
+                      type="text"
+                      name="name"
+                      placeholder="Your name"
+                    />
+                    <input
+                      class="form__input"
+                      type="email"
+                      name="email"
+                      placeholder="Your e-mail"
+                    />
+                  </div>
+                  <textarea
+                    class="form__textarea"
+                    name="message"
+                    placeholder="Your message"
+                  ></textarea>
+                  <button class="form__btn button" type="submit">Send</button>
+                </form>
               </div>
-              <a href="tel:" class="contact__content-tel hover-link"
-                ><span>(415) 829-7934</span></a
-              >
-              <address class="contact__content-address">
-                725 Green St<br />
-                San Francisco, California(CA), 94133
-              </address>
-              <a
-                href="mailto:ouremailaddress@email.com"
-                class="contact__content-email f-center hover-link"
-              >
-                <svg class="icon icon-email">
-                  <use xlink:href="./images/symbol-defs.svg#icon-email"></use>
-                </svg>
-                <span>ouremailaddress@email.com</span>
-              </a>
-              <form action="." class="contact__form">
-                <div class="contact__form-group">
-                  <input
-                    class="contact__form-input"
-                    type="text"
-                    name="name"
-                    placeholder="Your name"
-                  />
-                  <input
-                    class="contact__form-input"
-                    type="email"
-                    name="email"
-                    placeholder="Your e-mail"
-                  />
+            </div>
+          </section>
+          <section class="contact__carousel">
+            <div class="contact-fluid">
+              <div class="swiper-container contact__carousel-container">
+                <div class="swiper-wrapper contact__carousel-wrapper">
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-full-1.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-full-2.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-full-3.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-full-4.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-full-5.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-full-6.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-1-410w.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-2-410w.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-3-410w.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-4-410w.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2020-5-410w.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide contact__carousel-slide">
+                    <div class="carousel-slide">
+                      <img
+                        src="./images/content/collection/collection2021-1-410w.jpg"
+                        alt="image"
+                        class="carousel-slide__img"
+                      /><span class="carousel-slide__hover"
+                        >Truffaut literally trust</span
+                      >
+                    </div>
+                  </div>
                 </div>
-                <textarea
-                  class="contact__form-message"
-                  name="message"
-                  placeholder="Your message"
-                ></textarea>
-                <button class="contact__form-btn button" type="submit">
-                  Send
-                </button>
-              </form>
+              </div>
+              <div class="swiper-pagination contact__carousel-pagination"></div>
             </div>
           </section>
         </article>
@@ -249,7 +430,7 @@
               </p>
               <a
                 href="mailto:ouremailaddress@email.com"
-                class="footer__top-contact-link f-center hover-link"
+                class="footer__top-contact-link email-link hover-link"
               >
                 <svg class="icon icon-email">
                   <use xlink:href="./images/symbol-defs.svg#icon-email"></use>
