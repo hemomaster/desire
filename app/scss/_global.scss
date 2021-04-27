@@ -436,39 +436,41 @@ POST
   // &__body {
   // }
   &__info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    font-weight: fw(semi-bold);
-    font-size: fz(xs);
-    line-height: 2;
-    color: clr(social-color);
     margin-bottom: 7px;
-
-    &-item:not(:last-child) {
-      position: relative;
-      padding-right: 8px;
-      margin-right: 8px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        right: 0;
-        height: 22px;
-        width: 1px;
-        background-color: clr(social-color);
-      }
-    }
-    &-date,
-    &-author,
-    &-category {
-      white-space: nowrap;
-    }
   }
   &__title {
     font-size: fz(lg);
     line-height: 1.58;
+  }
+}
+.post-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  font-weight: fw(semi-bold);
+  font-size: fz(xs);
+  line-height: 2;
+  color: clr(social-color);
+
+  &__item:not(:last-child) {
+    position: relative;
+    padding-right: 8px;
+    margin-right: 8px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: 0;
+      height: 22px;
+      width: 1px;
+      background-color: clr(social-color);
+    }
+  }
+  &__date,
+  &__author,
+  &__category {
+    white-space: nowrap;
   }
 }
 /* *******************************
@@ -496,6 +498,36 @@ VIDEO-POST
     background-color: rgba(clr(title-color), 0.47);
     .icon-play {
       fill-opacity: 1;
+    }
+  }
+}
+/* *******************************
+SOCIAL-MENU
+******************************* */
+.social-menu {
+  @include f-center(flex-start);
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    display: block;
+    font-size: 0;
+    color: clr(social-color);
+  }
+
+  .icon-facebook,
+  .icon-instagram,
+  .icon-pinterest,
+  .icon-whatsapp,
+  .icon-youtube {
+    width: 28px;
+    height: 18px;
+    @include transit(color);
+
+    &:hover {
+      color: darken(clr(social-color), 20%);
     }
   }
 }
