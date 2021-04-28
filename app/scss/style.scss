@@ -783,13 +783,119 @@ BLOG
 .blog {
   &__container {
     display: flex;
+    justify-content: space-between;
   }
+
   &__items {
-    flex: 1 1 730px;
-    margin-right: 30px;
+    flex-basis: 65.766%;
+    max-width: 65.766%;
+    margin-right: 10px;
   }
+
+  &__item {
+    margin-bottom: 50px;
+
+    &.quote {
+      margin-top: 120px;
+    }
+  }
+
   &__sidebar {
-    flex: 0 0 350px;
+    flex-basis: 31.532%;
+  }
+
+  .post-carousel {
+    &__container,
+    &__slide {
+      height: 0;
+      padding-bottom: 55.56%;
+    }
+
+    &__container {
+      margin-bottom: 20px;
+    }
+
+    &__slide {
+      position: relative;
+
+      &-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__prev,
+    &__next {
+      color: clr(black-color);
+
+      &::after {
+        font-size: fz(sm);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__pag {
+    @extend %f-center;
+    &-item {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &-link {
+      display: block;
+      font-weight: fw(semi-bold);
+      font-size: fz(xs);
+      padding: 0 6px;
+      color: clr(text-small);
+
+      &.active {
+        color: clr(title-color);
+      }
+    }
+
+    .icon-arrow-right {
+      width: 6px;
+      height: 12px;
+      color: clr(black-color);
+      fill-opacity: 0.7;
+    }
+  }
+}
+
+.quote {
+  font-size: fz(lg);
+  font-style: italic;
+  font-weight: fw(light);
+  text-align: center;
+  padding: 55px 65px;
+  background-color: rgba(clr(footer-bg-color), 0.5);
+
+  &__author {
+    position: relative;
+    display: block;
+    @extend .title;
+    font-size: fz(sm);
+    color: rgba(clr(title-color), 0.9);
+    padding-top: 20px;
+    margin-top: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 200px;
+      height: 1px;
+      margin: 0 auto;
+      background-color: clr(title-decor);
+    }
   }
 }
 

@@ -82,6 +82,16 @@
   .contact__map {
     padding-bottom: 50%;
   }
+  .blog__item.quote {
+    margin-top: 0;
+  }
+  .quote {
+    padding: 27px 32px;
+  }
+  .quote__author {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
 }
 
 // до 800px
@@ -156,6 +166,9 @@
   }
   .contact.section {
     margin-top: -47px;
+  }
+  .quote {
+    font-size: fz(md);
   }
 }
 
@@ -392,7 +405,6 @@
     grid-template-rows: repeat(5, 350px);
   }
   .gallery-page .masonry__items {
-    // grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(10, 350px);
   }
   .notice__inner {

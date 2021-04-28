@@ -423,6 +423,7 @@ POST
     height: 0;
     padding-bottom: 55.56%;
     margin-bottom: 20px;
+    background-color: clr(footer-bg-color);
 
     &-img {
       position: absolute;
@@ -431,6 +432,13 @@ POST
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    &-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
   // &__body {
@@ -441,6 +449,9 @@ POST
   &__title {
     font-size: fz(lg);
     line-height: 1.58;
+  }
+  &__lead {
+    padding-top: 5px;
   }
 }
 .post-info {
@@ -530,4 +541,8 @@ SOCIAL-MENU
       color: darken(clr(social-color), 20%);
     }
   }
+}
+.swiper-slide-img {
+  width: 730px;
+  height: 415px;
 }

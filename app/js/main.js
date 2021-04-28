@@ -53,6 +53,21 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // слайдер первого экрана home page
+  const postSlider = new Swiper(".swiper-container.post-carousel__container", {
+    slidesPerView: 1,
+    loop: true,
+    effect: "fade",
+
+    fadeEffect: {
+      crossFade: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
   // Переключаем элемент ".side-menu" если была нажат
   // пункт меню ".nav__list-link",
   // кнопка закрытия ".side-menu__close",

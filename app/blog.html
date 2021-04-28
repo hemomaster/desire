@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- 
   Верстка сайта. Верстаю многостраничный сайт, использую GULP, SCSS, БЭМ
-  https://youtu.be/Nxg6UfofZX0?t=33946
+  https://youtu.be/Nxg6UfofZX0?t=34909
   
   Адаптив https://youtu.be/YMklBBnKJDg?t=11604
 -->
@@ -160,7 +160,173 @@
         </div>
         <article class="section blog">
           <div class="container blog__container">
-            <section class="blog__items"></section>
+            <section class="blog__items">
+              <article class="blog__item post">
+                <div class="post__link">
+                  <img
+                    src="./images/content/blog/post-image-1.jpg"
+                    alt="image post preview"
+                    class="post__link-img"
+                  />
+                </div>
+                <div class="post__body">
+                  <ul class="post__info post-info">
+                    <li class="post-info__item">
+                      <time class="post-info__date" datetime="2020-08-15"
+                        >August 15, 2020</time
+                      >
+                    </li>
+                    <li class="post-info__item">
+                      <a href="#" class="post-info__author">by Ann Summers</a>
+                    </li>
+                    <li class="post-info__item">
+                      <a href="#" class="post-info__category"
+                        >Bedroom Furniture</a
+                      >
+                    </li>
+                  </ul>
+                  <h2 class="title post__title">
+                    <a href="#" class="post__title-link">
+                      Red selfies edison bulb four dollar toast humblebrag for
+                      the furniture
+                    </a>
+                  </h2>
+                  <p class="post__lead">
+                    Everyday carry actually neutra authentic kogi shabby chic
+                    migas small batch craft beer. Literally williamsburg tote
+                    bag farm-to-table mustache ugh deep v irony. Af man bun
+                    copper mug iPhone enamel pin pug selvage hammock palo santo
+                    godard thundercats coloring book yuccie woke. Ugh pok pok
+                    taxidermy pabst enamel pin edison bulb farm-to-table
+                  </p>
+                </div>
+              </article>
+              <blockquote class="blog__item quote">
+                “Simplicity is not the goal. It is the by-product of a good idea
+                and modest expectations”
+                <span class="quote__author">Paul Rand</span>
+              </blockquote>
+              <article class="blog__item post post-popup">
+                <div class="post__link">
+                  <img
+                    src="./images/content/blog/post-image-2.jpg"
+                    alt="image post preview"
+                    class="post__link-img"
+                  />
+                  <a href="#" class="video-button post__link-btn">
+                    <svg class="icon icon-play">
+                      <use
+                        xlink:href="./images/symbol-defs.svg#icon-play"
+                      ></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="post__body">
+                  <ul class="post__info post-info">
+                    <li class="post-info__item">
+                      <time class="post-info__date" datetime="2020-08-15"
+                        >August 15, 2020</time
+                      >
+                    </li>
+                    <li class="post-info__item">
+                      <a href="#" class="post-info__author">by Ann Summers</a>
+                    </li>
+                    <li class="post-info__item">
+                      <a href="#" class="post-info__category"
+                        >Bedroom Furniture</a
+                      >
+                    </li>
+                  </ul>
+                  <h2 class="title post__title">
+                    <a href="#" class="post__title-link">
+                      Authentic kogi shabby chic
+                    </a>
+                  </h2>
+                </div>
+              </article>
+              <article class="blog__item post-carousel">
+                <div class="swiper-container post-carousel__container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="post-carousel__slide">
+                        <img
+                          src="./images/content/blog/post-image-3.jpg"
+                          alt="image post preview"
+                          class="post-carousel__slide-img"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="post-carousel__slide">
+                        <img
+                          src="./images/content/blog/post-image-1.jpg"
+                          alt="image post preview"
+                          class="post-carousel__slide-img"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="post-carousel__slide">
+                        <img
+                          src="./images/content/blog/post-image-2.jpg"
+                          alt="image post preview"
+                          class="post-carousel__slide-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev post-carousel__prev"></div>
+                  <div class="swiper-button-next post-carousel__next"></div>
+                </div>
+                <div class="post__body">
+                  <ul class="post__info post-info">
+                    <li class="post-info__item">
+                      <time class="post-info__date" datetime="2020-08-15"
+                        >August 15, 2020</time
+                      >
+                    </li>
+                    <li class="post-info__item">
+                      <a href="#" class="post-info__author">by Ann Summers</a>
+                    </li>
+                    <li class="post-info__item">
+                      <a href="#" class="post-info__category"
+                        >Bedroom Furniture</a
+                      >
+                    </li>
+                  </ul>
+                  <h2 class="title post__title">
+                    <a href="#" class="post__title-link">
+                      Red selfies edison bulb four dollar toast humblebrag for
+                      the furniture
+                    </a>
+                  </h2>
+                  <p class="post__lead">
+                    Everyday carry actually neutra authentic kogi shabby chic
+                    migas small batch craft beer. Literally williamsburg tote
+                    bag farm-to-table mustache ugh deep v irony. Af man bun
+                    copper mug iPhone enamel pin pug selvage hammock palo santo
+                    godard thundercats coloring book yuccie woke. Ugh pok pok
+                    taxidermy pabst enamel pin edison bulb farm-to-table
+                  </p>
+                </div>
+              </article>
+              <ul class="blog__pag">
+                <li class="blog__pag-item">
+                  <a href="#" class="blog__pag-link active">1</a>
+                </li>
+                <li class="blog__pag-item">
+                  <a href="#" class="blog__pag-link">2</a>
+                </li>
+                <li class="blog__pag-item">
+                  <a href="#" class="blog__pag-link"
+                    ><svg class="icon icon-arrow-right">
+                      <use
+                        xlink:href="./images/symbol-defs.svg#icon-arrow-right"
+                      ></use></svg
+                  ></a>
+                </li>
+              </ul>
+            </section>
             <aside class="blog__sidebar sidebar">
               <form class="sidebar__search" action="./search.php" method="get">
                 <input
