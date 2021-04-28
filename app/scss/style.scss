@@ -848,7 +848,9 @@ BLOG
   @extend %f-center;
 
   &__link {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+
     padding: 0 6px;
 
     &:first-child {
@@ -860,7 +862,8 @@ BLOG
     }
 
     &.active {
-      display: block;
+      opacity: 1;
+      pointer-events: auto;
     }
   }
 
@@ -882,6 +885,7 @@ BLOG
 
       &.active {
         color: clr(black-color);
+        pointer-events: none;
       }
     }
   }
@@ -908,6 +912,7 @@ BLOG
     display: block;
     @extend .title;
     font-size: fz(sm);
+    font-style: normal;
     color: rgba(clr(title-color), 0.9);
     padding-top: 20px;
     margin-top: 20px;

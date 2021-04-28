@@ -294,6 +294,33 @@
   .contact__map {
     padding-bottom: 60%;
   }
+  .blog__container {
+    flex-direction: column;
+  }
+  .blog__items {
+    flex-basis: 0;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .blog__item {
+    margin-bottom: 35px;
+  }
+  .post-carousel .swiper-slide {
+    width: 100%;
+  }
+  .blog__sidebar {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .sidebar__search,
+  .sidebar__cat,
+  .sidebar__news,
+  .sidebar__tags {
+    margin-bottom: 35px;
+  }
+  .blog__pagination {
+    margin-bottom: 20px;
+  }
 }
 
 // до 576px
@@ -469,6 +496,22 @@
   }
   .contact__carousel-container {
     margin-bottom: 20px;
+  }
+  .sidebar__cat-title,
+  .sidebar__news-title,
+  .sidebar__tags-title {
+    font-size: fz(md);
+  }
+  .quote__author {
+    font-size: fz(sm);
+  }
+  .video-button {
+    width: 65px;
+    height: 65px;
+  }
+  .video-button .icon-play {
+    width: 25px;
+    height: 30px;
   }
 }
 
