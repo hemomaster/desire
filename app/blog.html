@@ -310,22 +310,28 @@
                   </p>
                 </div>
               </article>
-              <ul class="blog__pag">
-                <li class="blog__pag-item">
-                  <a href="#" class="blog__pag-link active">1</a>
-                </li>
-                <li class="blog__pag-item">
-                  <a href="#" class="blog__pag-link">2</a>
-                </li>
-                <li class="blog__pag-item">
-                  <a href="#" class="blog__pag-link"
-                    ><svg class="icon icon-arrow-right">
-                      <use
-                        xlink:href="./images/symbol-defs.svg#icon-arrow-right"
-                      ></use></svg
-                  ></a>
-                </li>
-              </ul>
+              <div class="blog__pagination pag">
+                <a href="#" class="pag__link"
+                  ><svg class="icon icon-arrow-left">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-arrow-left"
+                    ></use></svg
+                ></a>
+                <ul class="pag__list">
+                  <li class="pag__list-item">
+                    <span href="#" class="pag__list-link active">1</span>
+                  </li>
+                  <li class="pag__list-item">
+                    <a href="#" class="pag__list-link">2</a>
+                  </li>
+                </ul>
+                <a href="#" class="pag__link active"
+                  ><svg class="icon icon-arrow-right">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-arrow-right"
+                    ></use></svg
+                ></a>
+              </div>
             </section>
             <aside class="blog__sidebar sidebar">
               <form class="sidebar__search" action="./search.php" method="get">
