@@ -798,6 +798,14 @@ BLOG
     &.quote {
       margin-top: 120px;
     }
+
+    &-tags {
+      margin-bottom: 40px;
+    }
+
+    &-navigations {
+      margin-bottom: 35px;
+    }
   }
 
   &__sidebar {
@@ -931,6 +939,110 @@ BLOG
   }
 }
 
+.post-nav {
+  @include f-center(space-between);
+  padding: 30px 0 !important;
+  border-top: 1px solid clr(footer-bg-color);
+  border-bottom: 1px solid clr(footer-bg-color);
+  border-radius: 1px;
+
+  &__item {
+    @extend %f-center;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  &__text {
+    font-weight: fw(semi-bold);
+    font-size: fz(xs);
+    color: clr(social-color);
+  }
+
+  .icon-arrow-left,
+  .icon-arrow-right {
+    display: block;
+    width: 12px;
+    height: 23px;
+    color: clr(title-color);
+    fill-opacity: 0.7;
+  }
+
+  .icon-arrow-left {
+    margin-right: 20px;
+  }
+
+  .icon-arrow-right {
+    margin-left: 20px;
+  }
+}
+
+.comments {
+  &__title {
+    @extend .title;
+    font-size: fz(md);
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__subtitle {
+    @extend .title;
+    font-size: fz(sm);
+    margin-bottom: 25px;
+  }
+
+  .comment {
+    display: flex;
+
+    &__avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+
+    &__body {
+      padding-left: 15px;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+
+      &-name {
+        @extend .title;
+        font-size: fz(sm);
+      }
+
+      &-date {
+        font-size: fz(xs);
+        color: clr(copyrait-color);
+      }
+
+      &-reply {
+        font-size: fz(xs);
+        color: clr(social-color);
+        padding: 0 5px;
+      }
+    }
+
+    &__content {
+      padding-top: 10px;
+    }
+  }
+}
+
 .sidebar {
   &__search {
     @extend %f-center;
@@ -969,8 +1081,7 @@ BLOG
   }
 
   &__cat-title,
-  &__news-title,
-  &__tags-title {
+  &__news-title {
     @extend .title;
     font-size: fz(sm);
     margin-bottom: 15px;
@@ -984,32 +1095,16 @@ BLOG
     margin-bottom: 10px;
   }
 
+  &__tags {
+    margin-bottom: 60px;
+  }
+
   .post-info {
     color: clr(copyrait-color);
     font-weight: fw(regular);
 
     &__item:not(:last-child)::before {
       background-color: currentColor;
-    }
-  }
-
-  &__tags {
-    margin-bottom: 60px;
-
-    &-list {
-      @include f-center(flex-start);
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    &-link {
-      font-weight: fw(semi-bold);
-      font-size: fz(xs);
-      border: 1px solid rgba(clr(controls-text), 0.6);
-      border-radius: 14px;
-      color: clr(controls-text);
-      padding: 0 16px;
-      white-space: nowrap;
     }
   }
 
