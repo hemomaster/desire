@@ -499,7 +499,8 @@
   }
   .sidebar__cat-title,
   .sidebar__news-title,
-  .sidebar__tags-title {
+  .sidebar__tags-title,
+  .tags__title {
     font-size: fz(md);
   }
   .quote__author {
@@ -512,6 +513,32 @@
   .video-button .icon-play {
     width: 25px;
     height: 30px;
+  }
+  .post__content blockquote span {
+    font-size: fz(sm);
+  }
+  .post-nav {
+    padding: 15px 0 !important;
+  }
+  .post-nav__text {
+    display: none;
+  }
+  .post__content blockquote {
+    font-size: fz(md);
+  }
+  .comments .comments__title {
+    font-size: fz(md);
+  }
+  .comments .comment__avatar {
+    width: 54px;
+    height: 54px;
+  }
+  .comments .comment__header-name,
+  .comments .comments__subtitle {
+    font-size: fz(sm);
+  }
+  .main-form__group {
+    flex-direction: column;
   }
 }
 
@@ -580,6 +607,9 @@
   .contact__form {
     align-items: stretch;
   }
+  .main-form__submit {
+    align-self: end;
+  }
 }
 // до 375px
 @include respond-to(xxs) {
@@ -591,5 +621,9 @@
   }
   .contact .carousel-slide {
     height: 125px;
+  }
+  .comments .comment__avatar {
+    width: 44px;
+    height: 44px;
   }
 }
